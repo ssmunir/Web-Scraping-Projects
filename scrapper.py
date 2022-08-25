@@ -170,11 +170,6 @@ SCHOOL2 = SCHOOL2.reshape(len(BATCH), 1)
 opt = np.concatenate((BATCH2, INSTITUTION2, SCHOOL2), axis=1)
 opt = pd.DataFrame(opt, columns=("batch", "inst_type", "school")) 
 
-
-#opt = pd.read_csv('TESTER.csv')
-
-
-
 opt = opt[opt.batch != "Select..."]
 opt = opt[opt.inst_type != "Select..."]
 opt =  opt[opt.school != "Select..."]
@@ -252,8 +247,6 @@ COURSES3 = COURSES3.reshape(len(BATCH), 1)
 opt = np.concatenate((BATCH3, INSTITUTION3, SCHOOL3, COURSES3), axis=1)
 opt = pd.DataFrame(opt, columns=("batch", "inst_type", "school", "course")) 
 
-#opt = pd.read_csv('opt_updated.csv')
-
 opt = opt[opt.batch != "Select..."]
 opt = opt[opt.inst_type != "Select..."]
 opt =  opt[opt.school != "Select..."]
@@ -264,8 +257,6 @@ new_inst3 = opt['inst_type'].tolist()
 new_school3 = opt['school'].tolist()
 new_course3 = opt['course'].tolist()
 
-#path = r"C:\Users\ACER\Documents\BAC.csv"
-#opt.to_csv(path)
 
 """
 _______________________________________________________________________________
@@ -439,28 +430,3 @@ df = pd.DataFrame(data, columns=("sno", "batch", "programme", "institution", "su
 ______________________________________________________________________________________
 ______________________________________________________________________________________
 """
-
-
-
-
-    
-
-
-    
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
